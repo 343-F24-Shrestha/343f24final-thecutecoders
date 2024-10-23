@@ -17,24 +17,34 @@
     <nav class="navbar bg-body-tertiary">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">To Do Buddy</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+        <button class="groups" type="button" aria-label="groups navigation">Groups</button>
+        <button class="friends" type="button" aria-label="friends navigation">Friends</button>
+        <button class="calendar" type="button" aria-label="calendar navigation">See Full Calendar</button>
+        <button class="profile" type="button" aria-label="profile navigation">Profile</button>
       </div>
     </nav>
     <div class="row">
-      <header aria-label="head"><h1>Home</h1></header>
+      <header aria-label="Home"><h1>Home</h1></header>
     </div>
     <div class="row">
-      <main class="col-8">main</main>
+      <main class="col-8">
+        <header aria-label="Today's Events Section">Today's Events</header>
+        <button type="button">Filter</button>
+        <p>- holds all friends and group tasks</p>
+        <p>- possibly allows filter</p>
+        <p>- could have 1 coulumn for friends and another for groups, instead of seperate group section
+        </p>
+      </main>
       <div class="col-sm-3 order-first">
-        <header aria-label="Left Section"> My Day </header>
-        <button type="button">Add</button>
+        <header aria-label="My Day Section">My Day</header>
+        <button type="button">Add Task</button>
         <div class="TasksContainer">
-          <header aria-label="Tasks"> All Personal Tasks</header>
+          <p>- holds all personal tasks</p>
         </div>
       </div>
-      <aside class="col-1 d-none d-md-block order-last">Right</aside>
+      <!-- <aside class="col-1 d-none d-md-block order-last">
+        <header aria-label="Groups">Groups</header>
+      </aside> -->
     </div>
   </div>
   <script>
