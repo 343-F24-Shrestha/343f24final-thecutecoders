@@ -42,10 +42,10 @@ a {
         padding: 1%;
     }
     a:nth-child(5) {
-        height: 60px;  
-        width: 60px; 
-        border: solid 1px;  
-        border-radius: 50%;  
+        height: 60px;
+        width: 60px;
+        border: solid 1px;
+        border-radius: 50%;
         align-content: center;
     }
 }
@@ -54,3 +54,25 @@ a {
 .row {
     width: 100%;
 }
+body {
+    /* background-color: #BC96EB; */
+    color: black;
+  }
+  .flex-container {
+    background-color: #8631E8;
+    width: 200px;
+    height: 400px;
+    color: white;
+    padding: 10px;
+  }
+  .TasksContainer {
+    margin-top: 10px;
+    background-color: #EBE397;
+    height: 250px;
+    overflow-y: auto; /* Enable vertical scroll */
+    padding: 10px;
+  }
+  header{
+    justify-content: center;
+    align-items: center;
+  }
