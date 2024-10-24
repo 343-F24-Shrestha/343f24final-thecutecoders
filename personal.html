@@ -7,6 +7,9 @@
 
   <style>
     /* YOUR STYLE HERE */
+    div {
+      text-align: center;
+    }
   </style>
 </head>
 <body>
@@ -28,8 +31,11 @@
       <main class="col-8">
         <header aria-label="Customize page">Customize Page</header>
         <p>- add customization functionality</p>
-        <p>- change background color</p>
-        <p>- font color/size</p>
+        <label for="backcolor">Choose your background color:</label>
+        <input type="color" id="backcolor" value="#ff0000">
+        <p></p>
+        <label for="fontcolor">Choose your font color:</label>
+        <input type="color" id="fontcolor" value="#ff0000">
         <p>- add quote, profile pic, mood emoji, listening to</p>
       </main>
       <div class="col-sm-3 order-first">
@@ -48,6 +54,14 @@
   </div>
   <script>
     // YOUR SCRIPT HERE
+    let backgroundColor = document.getElementById("backcolor")
+    let fontColor = document.getElementById("fontcolor")
+    backgroundColor.addEventListener("change", function() {
+      document.body.style.backgroundColor = backgroundColor.value; // works
+    });
+    fontColor.addEventListener("change", function() {
+      document.body.style.color = fontColor.value; // TODO
+    });
   </script>
 </body>
 </html>
