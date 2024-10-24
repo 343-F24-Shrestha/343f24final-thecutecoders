@@ -5,14 +5,23 @@
   <title>Home</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <style>
-    div {
-      justify-content: center;
-      align-items: center;
+    .flex-container {
+      background-color: #8631E8;
+      width: 200px;
+      height: 400px;
+      color: white;
+      padding: 10px;
+    }
+    .TasksContainer {
+      margin-top: 10px;
+      background-color: #EBE397;
+      height: 250px;
+      overflow-y: auto; /* Enable vertical scroll */
+      padding: 10px;
     }
   </style>
 </head>
 <body>
-  <!-- YOUR CONTENT HERE -->
   <div class="container">
     <nav class="navbar bg-body-tertiary">
       <div class="container-fluid">
@@ -24,7 +33,7 @@
       </div>
     </nav>
     <div class="row">
-      <header aria-label="Home"><h1>Home</h1></header>
+      <header aria-label="head"><h1>Home</h1></header>
     </div>
     <div class="row">
       <main class="col-8">
@@ -32,19 +41,26 @@
         <button type="button">Filter</button>
         <p>- holds all friends and group tasks</p>
         <p>- possibly allows filter</p>
-        <p>- could have 1 coulumn for friends and another for groups, instead of seperate group section
-        </p>
+        <p>- could have 1 column for friends and another for groups, instead of separate group section</p>
       </main>
-      <div class="col-sm-3 order-first">
-        <header aria-label="My Day Section">My Day</header>
-        <button type="button">Add Task</button>
+      <div class="col-sm-3 order-first flex-container">
+        <header aria-label="Left Section">My Day</header>
+        <button type="button">Add</button>
         <div class="TasksContainer">
-          <p>- holds all personal tasks</p>
+          <header aria-label="Tasks">All Personal Tasks</header>
+          <p>Task 1</p>
+          <p>Task 2</p>
+          <p>Task 3</p>
+          <p>Task 4</p>
+          <p>Task 5</p>
+          <p>Task 6</p>
+          <p>Task 7</p>
+          <p>Task 8</p>
+          <p>Task 9</p>
+          <p>Task 10</p>
         </div>
       </div>
-      <!-- <aside class="col-1 d-none d-md-block order-last">
-        <header aria-label="Groups">Groups</header>
-      </aside> -->
+      <aside class="col-1 d-none d-md-block order-last">Right</aside>
     </div>
   </div>
   <script>
