@@ -21,7 +21,7 @@
             <header aria-label="head"><h1>Home</h1></header>
         </div>
         <div class="row">
-            <main class="col-sm-8">
+            <main class="col-sm-6 main-container">
                 <header aria-label="Today's Events Section">Today's Events</header>
                 <button type="button">Filter</button>
                 <div class="status-updates row">
@@ -29,7 +29,7 @@
 
                     <div class="row">
                         <img class="profile-picture col-sm-3" id="profile1pic" src="Images/error.jpg">
-                        <p id="profile1text" class="col-sm-3">Error</p>
+                        <p id="profile1text" class="col-sm-6">Error</p>
                         <img class="status-emoji col-sm-3" id="profile1emoji" src="Images/error.jpg" width="20" height="20">
                     </div>
 
@@ -42,10 +42,10 @@
 
                 </div>
                 <div class="friends-groups-columns row">
-                    <div class="col-sm-3">
+                    <div class="col-sm-3 friends-column">
                         <p>Friend Events:</p>
                     </div>
-                    <div class="col-sm-5">
+                    <div class="col-sm-3 group-column">
                       <p>Group Events:</p>
                     </div>
                 </div>
@@ -75,6 +75,9 @@
         </div>
     </div>
     <script>
+        // Accepts three tuples with for the status' picture, text, and emoji.
+        // Uses the tuple's first object as a target, and the second as the content.
+        // Used in the main section
         function changeStatus(pic, status, emoji) {
             console.log("Hello! Trying to change status")
             document.getElementById(pic[0]).src = pic[1];
@@ -82,6 +85,7 @@
             document.getElementById(emoji[0]).src = emoji[1];
             console.log("Goodbye! Finished changing status")
         }
+        // Sets two examples
         changeStatus(["profile1pic", "Images/profilepic1.jpg"], ["profile1text", "Doing fine!"], ["profile1emoji", "Images/happyEmoji.png"]);
         changeStatus(["profile2pic", "Images/profilepic2.jpg"], ["profile2text", "I'm so sad."], ["profile2emoji", "Images/sadEmoji.png"]);
 

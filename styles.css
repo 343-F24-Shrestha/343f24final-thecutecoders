@@ -60,6 +60,14 @@ a {
     height: 30px;
 }
 
+.friends-column {
+    background-color: #EBE397;
+}
+
+.group-column {
+    background-color: #ebe397ad;
+}
+
 .row {
     width: 100%;
 }
@@ -69,10 +77,17 @@ body {
   }
   .flex-container {
     background-color: #8631E8;
-    width: 200px;
-    height: 400px;
+
     color: white;
     padding: 10px;
+    margin: 10px;
+  }
+
+  .main-container {
+    background-color: #8631E8;
+    color: white;
+    padding: 10px;
+    margin: 10px;
   }
   .TasksContainer {
     margin-top: 10px;
