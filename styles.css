@@ -53,9 +53,11 @@ a {
 
 .task-expandable {
     background-color: #a269e3;
+    text-align: center;
     border: none;
-    display: inline-block
-
+    width: 50%;
+    margin-left: 5%;
+    
 }
 
 .profile-picture {
@@ -68,8 +70,24 @@ a {
     height: 30px;
 }
 
+
 .friends-row {
     background-color: #EBE397;
+}
+
+.friend-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+.friend-section > * {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
 }
 
 
@@ -91,9 +109,17 @@ body {
 
   .main-container {
     background-color: #8631E8;
+    display: flex;
+    flex-direction: column;
     color: white;
     padding: 10px;
     margin: 10px;
+
+  }
+
+  .main-container > * {
+    align-items: center;
+    justify-content: center;
   }
   .TasksContainer {
     margin-top: 10px;

@@ -27,33 +27,31 @@
                 <div class="status-updates row">
                     <p>Status updates:</p>
 
-                    <div class="row">
-                        <img class="profile-picture col-sm-3" id="profile1pic" src="Images/error.jpg">
-                        <p id="profile1text" class="col-sm-6">Error</p>
-                        <img class="status-emoji col-sm-3" id="profile1emoji" src="Images/error.jpg" width="20" height="20">
+                    <div class="row friend-section">
+                        <div class="row">
+                            <img class="profile-picture col-sm-3" id="profile1pic" src="Images/error.jpg">
+                            <p id="profile1text" class="col-sm-6">Error</p>
+                            <img class="status-emoji col-sm-3" id="profile1emoji" src="Images/error.jpg" width="20" height="20">
+                        </div>
+                        <button type="button" class="task-expandable" onclick="toggleVisible('barb')">Tasks</button>
+                        <p id="barb">Exercise or whatever</p>
                     </div>
 
-                    <div class="row">
-                        <img class="profile-picture col-sm-3" id="profile2pic" src="Images/error.jpg">
-                        <p id="profile2text" class="col-sm-3">Error</p>
-                        <img class="status-emoji col-sm-3" id="profile2emoji" src="Images/error.jpg" width="20" height="20">
+                    <div class="row friend-section">
+                        <div class="row">
+                            <img class="profile-picture col-sm-3" id="profile2pic" src="Images/error.jpg">
+                            <p id="profile2text" class="col-sm-3">Error</p>
+                            <img class="status-emoji col-sm-3" id="profile2emoji" src="Images/error.jpg" width="20" height="20">
+                        </div>
+                        <button type="button" class="task-expandable" onclick="toggleVisible('jerry')">Tasks</button>
+                        <p id="jerry">Kick puppies</p>
                     </div>
+
+
+
 
 
                 </div>
-                <div class="friends-row row">
-                    <p>Friend Events:</p>
-                      <button type="button" class="task-expandable" onclick="toggleVisible('barb')">Barbara</button>
-                    <p id="barb">Exercise or whatever</p>
-
-                      <button type="button" class="task-expandable" onclick="toggleVisible('jerry')">Jerry</button>
-                    <p id="jerry">Kick puppies</p>
-
-                </div>
-
-                    <p>- holds all frends and group tasks</p>
-                    <p>- possibly allows filter</p>
-                    <p>- could have 1 column for friends and another for groups, instead of separate group section</p>
             </main>
             <div class="col-sm-3 order-first flex-container">
                 <header aria-label="Left Section">My Day</header>
@@ -79,15 +77,15 @@
         function toggleVisible(id, bool) {
             x = document.getElementById(id);
             if (x.style.display == 'block') {
-                console.log("Block to none");
                 x.style.display = 'none';
             }
             else {
-                console.log("Not that");
                 x.style.display = 'block';
             }
         }
 
+        toggleVisible("barb");
+        toggleVisible("jerry");
         toggleVisible("barb");
         toggleVisible("jerry");
 
@@ -104,8 +102,8 @@
             console.log("Goodbye! Finished changing status")
         }
         // Sets two examples
-        changeStatus(["profile1pic", "Images/profilepic1.jpg"], ["profile1text", "Doing fine!"], ["profile1emoji", "Images/happyEmoji.png"]);
-        changeStatus(["profile2pic", "Images/profilepic2.jpg"], ["profile2text", "I'm so sad."], ["profile2emoji", "Images/sadEmoji.png"]);
+        changeStatus(["profile1pic", "Images/profilepic1.jpg"], ["profile1text", "Barbara - 'Doing fine!'"], ["profile1emoji", "Images/happyEmoji.png"]);
+        changeStatus(["profile2pic", "Images/profilepic2.jpg"], ["profile2text", "Jerry - 'I'm so sad.'"], ["profile2emoji", "Images/sadEmoji.png"]);
 
     </script>
 </body>
