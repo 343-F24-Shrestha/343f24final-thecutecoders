@@ -5,12 +5,23 @@
   <title>Personal</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <link href="styles.css" rel="stylesheet">
+  <link rel="icon" href="https://fav.farm/🧚🏼‍♀️">
 
   <style>
-    /* YOUR STYLE HERE */
     div {
       text-align: center;
     }
+    main {
+      font-size: larger;
+    }
+    /* for pfp in the future
+    a:nth-child(5) {
+          height: 60px;
+          width: 60px;
+          border: solid 1px;
+          border-radius: 50%;
+          align-content: center;
+      } */
   </style>
 </head>
 <body>
@@ -26,39 +37,73 @@
       <header aria-label="Personalization Page"><h1>Personalization Page</h1></header>
     </div>
     <div class="row">
-      <main class="col-8">
-        <header aria-label="Customize page">Customize Page</header>
-        <p>- add customization functionality</p>
+      <!-- <div class="col-sm-2 order-first">
+        <header aria-label="My Tasks">My Tasks</header>
+        <button class="add" type="button" aria-label="add task">Add Task</button>
+        <button class="remove" type="button" aria-label="remove task">Remove Task</button>
+        <button class="completed" type="button" aria-label="see completed tasks">See Completed Tasks</button>
+      </div> -->
+      <div class="col-sm-3 order-first flex-container">
+        <header aria-label="Left Section">My Day</header>
+        <button class="AddButt" type="button">Add</button>
+        <div class="TasksContainer">
+            <header aria-label="Tasks">All Personal Tasks</header>
+            <p>Task 1</p>
+            <p>Task 2</p>
+            <p>Task 3</p>
+            <p>Task 4</p>
+            <p>Task 5</p>
+            <p>Task 6</p>
+            <p>Task 7</p>
+            <p>Task 8</p>
+            <p>Task 9</p>
+            <p>Task 10</p>
+        </div>
+    </div>
+      <main class="col-6"> <!--Main part of the page-->
+        <p>pfp goes here</p>
+        <p>Connor Begley</p>
+        <p id="quote">"Oh, the things you can find, if you don’t stay behind." — Dr. Seuss</p>
+        <p>Listening to: "360, by Charli xcx"</p> <!--Make spotify eventually-->
+        <p>Mood: 🥸</p>
+      </main>
+      <!--Third part, aka settings, make dropdown-->
+      <aside class="col-2 d-none d-md-block order-last">
+        <header aria-label="Themes">Themes:</header>
+        <select id="mySelect" class="mySelect" onchange="changeAlarm()">
+          <option>⭐</option>
+          <option>❤️</option>
+          <option>🎃</option>
+        </select>
+        <button>Custom Theme</button>
         <label for="backcolor">Choose your background color:</label>
         <input type="color" id="backcolor" value="#ff0000">
         <p></p>
         <label for="fontcolor">Choose your font color:</label>
         <input type="color" id="fontcolor" value="#ff0000">
-        <p>- add quote, profile pic, mood emoji, listening to</p>
-      </main>
-      <div class="col-sm-3 order-first">
-        <header aria-label="My Tasks">My Tasks</header>
-        <button class="add" type="button" aria-label="add task">Add Task</button>
-        <button class="remove" type="button" aria-label="remove task">Remove Task</button>
-        <button class="completed" type="button" aria-label="see completed tasks">See Completed Tasks</button>
-
-      </div>
-      <aside class="col-1 d-none d-md-block order-last">
-        <header aria-label="Themes">Themes</header>
-        <p>- add themes when made</p>
-
+        <form>
+          <input type="text" name="quote">
+          <button id="quoteButton">Change quote</button>
+        </form>
       </aside>
     </div>
   </div>
   <script>
-    // YOUR SCRIPT HERE
     let backgroundColor = document.getElementById("backcolor")
     let fontColor = document.getElementById("fontcolor")
+    // Currently only changes the color when the color picker is actually changed.
     backgroundColor.addEventListener("change", function() {
-      document.body.style.backgroundColor = backgroundColor.value; // works
+      document.body.style.backgroundColor = backgroundColor.value;
     });
+    // Changes font when font color picker is changed
     fontColor.addEventListener("change", function() {
-      document.body.style.color = fontColor.value; // TODO
+      document.body.style.color = fontColor.value; // works
+    });
+
+    let quote_b = document.getElementById("quoteButton")
+    
+    quote_b.addEventListener("click", function() {
+      
     });
   </script>
 </body>
