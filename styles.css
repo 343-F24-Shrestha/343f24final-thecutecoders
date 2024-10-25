@@ -122,3 +122,28 @@ html {
       font-size: larger;
       font-family: andale mono;
   }
+  .days {
+    padding: 10px 0;
+    background: #fcc8b2;
+    margin: 0;
+    font-family: andale mono;
+  }
+
+  .days li {
+    list-style-type: none;
+    display:inline-table;
+    width: 12.6%;
+    text-align: center;
+    height: 100px;
+    margin-bottom: 5px;
+    font-size:12px;
+    color: #777;
+    font-family: andale mono;
+  }
+
+  thead {
+    font-family: andale mono;
+    background-color: #fcc8b2;
+    justify-content: center;
+    align-items: center;
+  }

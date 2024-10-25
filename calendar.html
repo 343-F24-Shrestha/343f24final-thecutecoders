@@ -18,23 +18,72 @@
     <a class="calendar" href="calendar.html">See Full Calendar</a>
     <a class="profile" href="personal.html">Profile</a>
   </div>
-  <div class="container">
-    <div class="row">
-      <header aria-label="Full Calendar"><h1>Full Calendar</h1></header>
-    </div>
-    <div class="row">
-      <main class="col-8">
-        <header aria-label="Month">Current Month</header>
-        <button class="prev" type="button" aria-label="prev month">&lt;&lt;</button>
-        <button class="next" type="button" aria-label="next month">&gt;&gt;</button>
-
-      </main>
-      <!-- <div class="col-sm-3 order-first">Left</div> -->
-      <aside class="col-1 d-none d-md-block order-last">
-        <button class="filter" type="button" aria-label="filter button">Filter</button>
-      </aside>
-    </div>
+      <!--calendar-->
+      <div class="container">
+        <div class="row">
+          <header aria-label="Full Calendar">
+            <h1>Full Calendar</h1>
+          </header>
+        <div class="row">
+          <main class="col-12">
+            <header aria-label="Month" class="d-flex align-items-center justify-content-between">
+              <button class="btn btn-primary prev" type="button" aria-label="prev month" onclick="prevMonth()"><<</button>
+              <h2 id="monthYear" class="text-center">Current Month</h2>
+              <button class="btn btn-primary next" type="button" aria-label="next month" onclick="nextMonth()">>></button>
+            </header>
+            <table class="table calendar-table mt-4">
+              <thead>
+                <tr>
+                  <th>Sun</th>
+                  <th>Mon</th>
+                  <th>Tue</th>
+                  <th>Wed</th>
+                  <th>Thu</th>
+                  <th>Fri</th>
+                  <th>Sat</th>
+                </tr>
+              </thead>
+              <tbody id="calendarDays"></tbody>
+            </table>
+    <ul class="days">
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+      <li>4</li>
+      <li>5</li>
+      <li>6</li>
+      <li>7</li>
+      <li>8</li>
+      <li>9</li>
+      <li><span class="active">7</span></li>
+      <li>11</li>
+      <li>12</li>
+      <li>13</li>
+      <li>14</li>
+      <li>15</li>
+      <li>16</li>
+      <li>17</li>
+      <li>18</li>
+      <li>19</li>
+      <li>20</li>
+      <li>21</li>
+      <li>22</li>
+      <li>23</li>
+      <li>24</li>
+      <li>25</li>
+      <li>26</li>
+      <li>27</li>
+      <li>28</li>
+      <li>29</li>
+      <li>30</li>
+      <li>31</li>
+    </ul>
+  </main>
+</div>
+</div>
+</div>
   </div>
+</div>
   <script>
     // YOUR SCRIPT HERE
   </script>
