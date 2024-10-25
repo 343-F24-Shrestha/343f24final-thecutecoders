@@ -41,13 +41,11 @@
 
 
                 </div>
-                <div class="friends-groups-columns row">
-                    <div class="col-sm-3 friends-column">
-                        <p>Friend Events:</p>
-                    </div>
-                    <div class="col-sm-3 group-column">
-                      <p>Group Events:</p>
-                    </div>
+                <div class="friends-row row">
+                    <p>Friend Events:</p>
+                      <button type="button" class="task-expandable" onclick="toggleVisible('test')">Barbara</button>
+                    <p id="test">Exercise or whatever</p>
+
                 </div>
 
                     <p>- holds all frends and group tasks</p>
@@ -75,6 +73,20 @@
         </div>
     </div>
     <script>
+        function toggleVisible(id, bool) {
+            x = document.getElementById(id);
+            if (x.style.visibility == 'hidden') {
+                x.style.visibility = 'visible';
+            }
+            else {
+                x.style.visibility = 'hidden';
+            }
+        }
+
+        toggleVisible("test");
+
+
+
         // Accepts three tuples with for the status' picture, text, and emoji.
         // Uses the tuple's first object as a target, and the second as the content.
         // Used in the main section

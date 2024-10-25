@@ -50,6 +50,13 @@ a {
     }
 }
 
+.task-expandable {
+    background-color: #a269e3;
+    border: none;
+    display: inline-block
+
+}
+
 .profile-picture {
     width: 50px;
     height: 30px;
@@ -60,13 +67,11 @@ a {
     height: 30px;
 }
 
-.friends-column {
+.friends-row {
     background-color: #EBE397;
 }
 
-.group-column {
-    background-color: #ebe397ad;
-}
+
 
 .row {
     width: 100%;
