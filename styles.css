@@ -50,6 +50,15 @@ a {
     }
 }
 
+.profile-picture {
+    width: 50px;
+    height: 30px;
+}
+
+.status-emoji {
+    width: 50px;
+    height: 30px;
+}
 
 .row {
     width: 100%;

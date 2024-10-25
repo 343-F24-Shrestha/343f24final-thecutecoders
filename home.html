@@ -9,47 +9,82 @@
   </style>
 </head>
 <body>
-  <div class="navbar">
-    <a class="navbar-brand" href="home.html">To Do Buddy</a>
-    <a class="groups" href="group.html">Groups</a>
-    <a class="friends" href="friend.html">Friends</a>
-    <a class="calendar" href="calendar.html">See Full Calendar</a>
-    <a class="profile" href="personal.html">Profile</a>
-  </div>
-  <div class="container">
-      <div class="row">
-        <header aria-label="head"><h1>Home</h1></header>
-      </div>
-      <div class="row">
-        <main class="col-8">
-          <header aria-label="Today's Events Section">Today's Events</header>
-          <button type="button">Filter</button>
-          <p>- holds all friends and group tasks</p>
-          <p>- possibly allows filter</p>
-          <p>- could have 1 column for friends and another for groups, instead of separate group section</p>
-        </main>
-        <div class="col-sm-3 order-first flex-container">
-          <header aria-label="Left Section">My Day</header>
-          <button type="button">Add</button>
-          <div class="TasksContainer">
-            <header aria-label="Tasks">All Personal Tasks</header>
-            <p>Task 1</p>
-            <p>Task 2</p>
-            <p>Task 3</p>
-            <p>Task 4</p>
-            <p>Task 5</p>
-            <p>Task 6</p>
-            <p>Task 7</p>
-            <p>Task 8</p>
-            <p>Task 9</p>
-            <p>Task 10</p>
-          </div>
+    <div class="navbar">
+        <a class="navbar-brand" href="home.html">To Do Buddy</a>
+        <a class="groups" href="group.html">Groups</a>
+        <a class="friends" href="friend.html">Friends</a>
+        <a class="calendar" href="calendar.html">See Full Calendar</a>
+        <a class="profile" href="personal.html">Profile</a>
+    </div>
+    <div class="container">
+        <div class="row">
+            <header aria-label="head"><h1>Home</h1></header>
         </div>
-        <aside class="col-1 d-none d-md-block order-last">Right</aside>
-      </div>
-  </div>
-  <script>
-    // YOUR SCRIPT HERE
-  </script>
+        <div class="row">
+            <main class="col-sm-8">
+                <header aria-label="Today's Events Section">Today's Events</header>
+                <button type="button">Filter</button>
+                <div class="status-updates row">
+                    <p>Status updates:</p>
+
+                    <div class="row">
+                        <img class="profile-picture col-sm-3" id="profile1pic" src="Images/error.jpg">
+                        <p id="profile1text" class="col-sm-3">Error</p>
+                        <img class="status-emoji col-sm-3" id="profile1emoji" src="Images/error.jpg" width="20" height="20">
+                    </div>
+
+                    <div class="row">
+                        <img class="profile-picture col-sm-3" id="profile2pic" src="Images/error.jpg">
+                        <p id="profile2text" class="col-sm-3">Error</p>
+                        <img class="status-emoji col-sm-3" id="profile2emoji" src="Images/error.jpg" width="20" height="20">
+                    </div>
+
+
+                </div>
+                <div class="friends-groups-columns row">
+                    <div class="col-sm-3">
+                        <p>Friend Events:</p>
+                    </div>
+                    <div class="col-sm-5">
+                      <p>Group Events:</p>
+                    </div>
+                </div>
+
+                    <p>- holds all frends and group tasks</p>
+                    <p>- possibly allows filter</p>
+                    <p>- could have 1 column for friends and another for groups, instead of separate group section</p>
+            </main>
+            <div class="col-sm-3 order-first flex-container">
+                <header aria-label="Left Section">My Day</header>
+                <button type="button">Add</button>
+                <div class="TasksContainer">
+                    <header aria-label="Tasks">All Personal Tasks</header>
+                    <p>Task 1</p>
+                    <p>Task 2</p>
+                    <p>Task 3</p>
+                    <p>Task 4</p>
+                    <p>Task 5</p>
+                    <p>Task 6</p>
+                    <p>Task 7</p>
+                    <p>Task 8</p>
+                    <p>Task 9</p>
+                    <p>Task 10</p>
+                </div>
+            </div>
+            <aside class="col-1 d-none d-md-block order-last">Right</aside>
+        </div>
+    </div>
+    <script>
+        function changeStatus(pic, status, emoji) {
+            console.log("Hello! Trying to change status")
+            document.getElementById(pic[0]).src = pic[1];
+            document.getElementById(status[0]).textContent = status[1];
+            document.getElementById(emoji[0]).src = emoji[1];
+            console.log("Goodbye! Finished changing status")
+        }
+        changeStatus(["profile1pic", "Images/profilepic1.jpg"], ["profile1text", "Doing fine!"], ["profile1emoji", "Images/happyEmoji.png"]);
+        changeStatus(["profile2pic", "Images/profilepic2.jpg"], ["profile2text", "I'm so sad."], ["profile2emoji", "Images/sadEmoji.png"]);
+
+    </script>
 </body>
 </html>
