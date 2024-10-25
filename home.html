@@ -43,8 +43,11 @@
                 </div>
                 <div class="friends-row row">
                     <p>Friend Events:</p>
-                      <button type="button" class="task-expandable" onclick="toggleVisible('test')">Barbara</button>
-                    <p id="test">Exercise or whatever</p>
+                      <button type="button" class="task-expandable" onclick="toggleVisible('barb')">Barbara</button>
+                    <p id="barb">Exercise or whatever</p>
+
+                      <button type="button" class="task-expandable" onclick="toggleVisible('jerry')">Jerry</button>
+                    <p id="jerry">Kick puppies</p>
 
                 </div>
 
@@ -75,15 +78,18 @@
     <script>
         function toggleVisible(id, bool) {
             x = document.getElementById(id);
-            if (x.style.visibility == 'hidden') {
-                x.style.visibility = 'visible';
+            if (x.style.display == 'block') {
+                console.log("Block to none");
+                x.style.display = 'none';
             }
             else {
-                x.style.visibility = 'hidden';
+                console.log("Not that");
+                x.style.display = 'block';
             }
         }
 
-        toggleVisible("test");
+        toggleVisible("barb");
+        toggleVisible("jerry");
 
 
 
