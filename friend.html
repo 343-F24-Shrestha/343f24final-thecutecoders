@@ -24,17 +24,83 @@
       <header aria-label="Friends"><h1>Friends</h1></header>
     </div>
     <div class="row">
-      <main class="col-8">Friend Updates</main>
-      <div class="col-sm-3 order-first">All Friends</div>
-      <aside class="col-1 d-none d-md-block order-last">
+      <main class="col-sm-5 main-container">
+        <header aria-label="Friend Updates">Friend Updates</header>
+        <div class="status-updates row">
+          <p>Status updates:</p>
+
+          <div class="row friend-section">
+              <div class="row">
+                  <img class="profile-picture col-sm-3" id="profile1pic" src="Images/error.jpg">
+                  <p id="profile1text" class="col-sm-8">Error</p>
+                  <img class="status-emoji col-sm-3" id="profile1emoji" src="Images/error.jpg" width="20" height="20">
+              </div>
+              <button type="button" class="task-expandable" onclick="toggleVisible('barb')">Tasks</button>
+              <p id="barb">Exercise or whatever</p>
+          </div>
+
+          <div class="row friend-section">
+              <div class="row">
+                  <img class="profile-picture col-sm-3" id="profile2pic" src="Images/error.jpg">
+                  <p id="profile2text" class="col-sm-8">Error</p>
+                  <img class="status-emoji col-sm-3" id="profile2emoji" src="Images/error.jpg" width="20" height="20">
+              </div>
+              <button type="button" class="task-expandable" onclick="toggleVisible('jerry')">Tasks</button>
+              <p id="jerry">Do homework</p>
+          </div>
+      </div>
+      </main>
+      <div class="col-sm-3 order-first flex-container">
+        <header aria-label="friends">Friends</header>
+        <div class="TasksContainer">
+          <p>Nevina</p>
+          <p>Eliza</p>
+          <p>Connor</p>
+          <p>Valerie</p>
+      </div>
+      </div>
+      <aside class="col-3 order-last flex-container">
         <p>Edit</p>
-        <button class="add" type="button" aria-label="add friend">Add Friend</button>
-        <button class="remove" type="button" aria-label="remove friend">Remove Friend</button>
-      </aside>
+        <div class="TasksContainer">
+          <button class="add" type="button" aria-label="add friend">Add Friend</button>
+          <button class="remove" type="button" aria-label="remove friend">Remove Friend</button>
+        </div>
+        </aside>
     </div>
   </div>
   <script>
-    // YOUR SCRIPT HERE
+    // Accepts three tuples with for the status' picture, text, and emoji.
+    // Uses the tuple's first object as a target, and the second as the content.
+    // Used in the main section
+    function changeStatus(pic, status, emoji) {
+        console.log("Hello! Trying to change status")
+        document.getElementById(pic[0]).src = pic[1];
+        document.getElementById(status[0]).textContent = status[1];
+        document.getElementById(emoji[0]).src = emoji[1];
+        console.log("Goodbye! Finished changing status")
+    }
+    // Sets two examples
+    changeStatus(["profile1pic", "Images/profilepic1.jpg"], ["profile1text", "Barbara - 'Doing fine!'"], ["profile1emoji", "Images/happyEmoji.png"]);
+    changeStatus(["profile2pic", "Images/profilepic2.jpg"], ["profile2text", "Jerry - 'I'm so sad.'"], ["profile2emoji", "Images/sadEmoji.png"]);
+
+    function toggleVisible(id, bool) {
+            x = document.getElementById(id);
+            if (x.style.display == 'block') {
+                x.style.display = 'none';
+            }
+            else {
+                x.style.display = 'block';
+            }
+        }
+
+        toggleVisible("barb");
+        toggleVisible("jerry");
+        toggleVisible("barb");
+        toggleVisible("jerry");
+        toggleVisible("cs343");
+        toggleVisible("cs343");
+        toggleVisible("Swim team");
+        toggleVisible("Swim team");
   </script>
 </body>
 </html>

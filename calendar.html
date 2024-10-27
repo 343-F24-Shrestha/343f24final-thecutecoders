@@ -20,18 +20,28 @@
     <a class="profile" href="personal.html">Profile</a>
   </div>
       <!--calendar-->
-      <div class="container">
-        <div class="row">
+    <div class="container">
+      <div class="row">
+        <div class="col-8">
           <header aria-label="Full Calendar">
             <h1>Full Calendar</h1>
           </header>
-        <div class="row">
-          <main class="col-12">
+        </div>
+        <div class="col-12">
             <header aria-label="Month" class="d-flex align-items-center justify-content-between">
-              <button class="btn btn-primary prev" type="button" aria-label="prev month" onclick="prevMonth()"><<</button>
+              <button class="btn btn-primary prev" type="button" aria-label="prev month" onclick="prevMonth()">&lt;&lt;</button>
               <h2 id="monthYear" class="text-center">Current Month</h2>
-              <button class="btn btn-primary next" type="button" aria-label="next month" onclick="nextMonth()">>></button>
+              <button class="btn btn-primary next" type="button" aria-label="next month" onclick="nextMonth()">&gt;&gt;</button>
             </header>
+            <div class="col-12 ml-auto">
+              <button class="filter" type="button" aria-label="filter button">Filter</button>
+              <div class="filter-content">
+                <input type="checkbox" value="groups">Groups
+                <input type="checkbox" value="friends">Friends
+                <input type="checkbox" value="personal">Personal
+                <input type="checkbox" value="completed">Completed
+              </div>
+            </div>
             <table class="table calendar-table mt-4">
               <thead>
                 <tr>

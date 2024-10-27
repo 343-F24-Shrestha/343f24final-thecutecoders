@@ -24,18 +24,35 @@
       <header aria-label="Groups"><h1>Groups</h1></header>
     </div>
     <div class="row">
-      <main class="col-8">
+      <main class="col-sm-5 main-container">
         <header aria-label="Group tasks">Group Tasks</header>
-        <button class="add" type="button" aria-label="add task">Add Task</button>
-        <button class="remove" type="button" aria-label="remove task">Remove Task</button>
-        <button class="completed" type="button" aria-label="see completed tasks">See Completed tasks</button>
+        <div class="column">
+          <button class="add" type="button" aria-label="add task">Add Task</button>
+          <button class="remove" type="button" aria-label="remove task">Remove Task</button>
+          <button class="completed" type="button" aria-label="see completed tasks">See Completed tasks</button>  
+        </div>
+        <div class="TasksContainer">
+          <p>Pick Group!</p>
+      </div>
       </main>
-      <div class="col-sm-3 order-first">All Groups</div>
-      <aside class="col-1 d-none d-md-block order-last">
-        <p>Edit</p>
-        <button class="add" type="button" aria-label="add group">Add Group</button>
-        <button class="remove" type="button" aria-label="remove group">Remove Group</button>
-      </aside>
+      <div class="col-sm-3 order-first flex-container">
+        <header aria-label="All groups">All Groups</header>
+        <header aria-label="Right Section">Groups</header>
+                <div class="TasksContainer">
+                    <button type="button" class="task-expandable" onclick="toggleVisible('cs343')">CS343</button>
+                    <!-- <p id="cs343">Complete Milestone 2</p> -->
+
+                    <button type="button" class="task-expandable" onclick="toggleVisible('Swim team')">Swim Team</button>
+                    <!-- <p id="Swim team">Go swimming</p> -->
+                </div>
+      </div>
+      <aside class="col-3 order-last flex-container">
+        <header aria-label="Edit section">Edit</header>
+        <div class="TasksContainer">
+          <button class="add" type="button" aria-label="add group">Add Group</button>
+          <button class="remove" type="button" aria-label="remove group">Remove Group</button>
+        </div>
+        </aside>
     </div>
   </div>
   <script>

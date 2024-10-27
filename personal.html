@@ -45,9 +45,11 @@
       </div> -->
       <div class="col-sm-3 order-first flex-container">
         <header aria-label="Left Section">My Day</header>
-        <button class="AddButt" type="button">Add</button>
+        <div class="row">
+          <header aria-label="Tasks">All Personal Tasks</header>
+      <button class="AddButt" type="button">Add</button>
+      </div>
         <div class="TasksContainer">
-            <header aria-label="Tasks">All Personal Tasks</header>
             <p>Task 1</p>
             <p>Task 2</p>
             <p>Task 3</p>
@@ -68,7 +70,7 @@
         <p>Mood: 🥸</p>
       </main>
       <!--Third part, aka settings, make dropdown-->
-      <aside class="col-2 d-none d-md-block order-last">
+      <aside class="col-2 order-last">
         <header aria-label="Themes">Themes:</header>
         <select id="mySelect" class="mySelect" onchange="changeAlarm()">
           <option>⭐</option>

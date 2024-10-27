@@ -16,12 +16,18 @@ html {
       div {
           width:100%;
       }
+      .container {
+        margin-right: 0px;
+        width: 100%;
+      }
   }
   .container {
       width: 100%;
       height: 100%;
-      align-items: flex-start;
+      align-items: flex-end;
       padding: 4%;
+      margin: 0%;
+      flex-direction: row;
   }
   a {
       background-color: rgb(251, 241, 250);
@@ -100,6 +106,7 @@ html {
 
   .row {
       width: 100%;
+      flex-direction: row;
   }
   body {
       /* background-color: #BC96EB; */
@@ -128,6 +135,10 @@ html {
       overflow-y: auto; /* Enable vertical scroll */
       padding: 10px;
       font-family: andale mono;
+      p {
+        /* background-color: #a269e3; */
+        color: black;
+      }
     }
 
     header{
