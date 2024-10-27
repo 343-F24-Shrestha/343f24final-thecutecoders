@@ -75,52 +75,38 @@
       <aside class="col-2 order-last">
         <div class="flex-container">
           <header aria-label="Themes">Themes:</header>
-          <select id="mySelect" class="mySelect" onchange="changeAlarm()">
+          <select id="mySelect" class="mySelect">
             <option>⭐</option>
             <option>❤️</option>
             <option>🎃</option>
           </select>
-          <button>Custom Theme</button>
+          <button type="button">Custom Theme</button>
           <label for="backcolor">Choose your background color:</label>
           <input type="color" id="backcolor" value="#ff0000">
           <p></p>
           <label for="fontcolor">Choose your font color:</label>
           <input type="color" id="fontcolor" value="#ff0000">
-          <form>
+          <form onsubmit="saveSettings(event)">
+            <label for="newQuote">New Quote</label>
             <input type="text" name="quote" id="newQuote">
-            <button id="quoteButton">Change quote</button>
+            <button type="submit">Save settings</button>
           </form>
         </div>
       </aside>
     </div>
   </div>
-  <form>
-    <input type="text" name="quote" id="newQuote">
-    <button id="quoteButton">Change quote</button>
-  </form>
   <script>
     let backgroundColor = document.getElementById("backcolor");
     let fontColor = document.getElementById("fontcolor");
-  
-    // Change background color(Outside of flexboxes)
-    backgroundColor.addEventListener("change", function() {
-      document.body.style.backgroundColor = backgroundColor.value;
-    });
-  
-    // Change font color (only works for outside of flexboxes)
-    fontColor.addEventListener("change", function() {
-      document.body.style.color = fontColor.value;
-    });
-  
-    // Changes the quote for this page load (doesn't save yet)
-    let quote_b = document.getElementById("quoteButton");
     let quote_text = document.getElementById("quote");
-  
-    quote_b.addEventListener("click", function(event) {
-      event.preventDefault();          // Prevent form submission
+
+    function saveSettings(event) {
+      event.preventDefault() // doesn't reload page
+      document.body.style.color = fontColor.value;
+      document.body.style.backgroundColor = backgroundColor.value;
       let newQuote = document.getElementById("newQuote").value;
       quote_text.innerText = newQuote; // Update quote text
-    });
+    }
   </script>
 </body>
 </html>
