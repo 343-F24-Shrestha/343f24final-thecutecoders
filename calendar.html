@@ -45,13 +45,13 @@
             <table class="table calendar-table mt-4">
               <thead>
                 <tr>
-                  <th>Sun</th>
-                  <th>Mon</th>
-                  <th>Tue</th>
-                  <th>Wed</th>
-                  <th>Thu</th>
-                  <th>Fri</th>
-                  <th>Sat</th>
+                  <th scope="row">Sun</th>
+                  <th scope="row">Mon</th>
+                  <th scope="row">Tue</th>
+                  <th scope="row">Wed</th>
+                  <th scope="row">Thu</th>
+                  <th scope="row">Fri</th>
+                  <th scope="row">Sat</th>
                 </tr>
               </thead>
               <tbody id="calendarDays"></tbody>
@@ -68,7 +68,7 @@
       <li onclick="onClick(9)">9</li>
       <li onclick="onClick(10)">10</li>
       <li onclick="onClick(11)">11</li>
-      <li onclick="onClick(12)">12</lionclick="onClick(1)">
+      <li onclick="onClick(12)">12</li>
       <li onclick="onClick(13)">13</li>
       <li onclick="onClick(14)">14</li>
       <li onclick="onClick(15)">15</li>
@@ -90,12 +90,11 @@
       <li onclick="onClick(31)">31</li>
     </ul>
       <p id="Data">Data</p>
-  </main>
+        </div>
+      </div>
 </div>
-</div>
-</div>
-  </div>
-</div>
+</body>
+</html>
   <script>
     function onClick(id) {
         console.log(id.toString() + " was clicked!");
@@ -103,5 +102,3 @@
     }
 
   </script>
-</body>
-</html>
