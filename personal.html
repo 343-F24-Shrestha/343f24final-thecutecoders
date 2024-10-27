@@ -12,16 +12,18 @@
       text-align: center;
     }
     main {
-      font-size: larger;
+      font-size: x-large;
     }
-    /* for pfp in the future
-    a:nth-child(5) {
-          height: 60px;
-          width: 60px;
-          border: solid 1px;
-          border-radius: 50%;
-          align-content: center;
-      } */
+    .title {
+      text-align: left;
+    }
+    .pfp {
+      height: 60px;
+      width: 60px;
+      border: solid 1px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
   </style>
 </head>
 <body>
@@ -34,7 +36,7 @@
   </div>
   <div class="container">
     <div class="row">
-      <header aria-label="Personalization Page"><h1>Personalization Page</h1></header>
+      <header aria-label="Personalization Page" class="title"><h1>Personal</h1></header>
     </div>
     <div class="row">
       <!-- <div class="col-sm-2 order-first">
@@ -62,8 +64,8 @@
             <p>Task 10</p>
         </div>
     </div>
-      <main class="col-6"> <!--Main part of the page-->
-        <p>pfp goes here</p>
+      <main class="col-6 flex-container"> <!--Main part of the page-->
+        <img src="Images/profilepic1.jpg" alt="Profile Picture" class="pfp">
         <p>Connor Begley</p>
         <p id="quote">"Oh, the things you can find, if you don’t stay behind." — Dr. Seuss</p>
         <p>Listening to: "360, by Charli xcx"</p> <!--Make spotify eventually-->
@@ -71,41 +73,53 @@
       </main>
       <!--Third part, aka settings, make dropdown-->
       <aside class="col-2 order-last">
-        <header aria-label="Themes">Themes:</header>
-        <select id="mySelect" class="mySelect" onchange="changeAlarm()">
-          <option>⭐</option>
-          <option>❤️</option>
-          <option>🎃</option>
-        </select>
-        <button>Custom Theme</button>
-        <label for="backcolor">Choose your background color:</label>
-        <input type="color" id="backcolor" value="#ff0000">
-        <p></p>
-        <label for="fontcolor">Choose your font color:</label>
-        <input type="color" id="fontcolor" value="#ff0000">
-        <form>
-          <input type="text" name="quote">
-          <button id="quoteButton">Change quote</button>
-        </form>
+        <div class="flex-container">
+          <header aria-label="Themes">Themes:</header>
+          <select id="mySelect" class="mySelect" onchange="changeAlarm()">
+            <option>⭐</option>
+            <option>❤️</option>
+            <option>🎃</option>
+          </select>
+          <button>Custom Theme</button>
+          <label for="backcolor">Choose your background color:</label>
+          <input type="color" id="backcolor" value="#ff0000">
+          <p></p>
+          <label for="fontcolor">Choose your font color:</label>
+          <input type="color" id="fontcolor" value="#ff0000">
+          <form>
+            <input type="text" name="quote" id="newQuote">
+            <button id="quoteButton">Change quote</button>
+          </form>
+        </div>
       </aside>
     </div>
   </div>
+  <form>
+    <input type="text" name="quote" id="newQuote">
+    <button id="quoteButton">Change quote</button>
+  </form>
   <script>
-    let backgroundColor = document.getElementById("backcolor")
-    let fontColor = document.getElementById("fontcolor")
-    // Currently only changes the color when the color picker is actually changed.
+    let backgroundColor = document.getElementById("backcolor");
+    let fontColor = document.getElementById("fontcolor");
+  
+    // Change background color(Outside of flexboxes)
     backgroundColor.addEventListener("change", function() {
       document.body.style.backgroundColor = backgroundColor.value;
     });
-    // Changes font when font color picker is changed
+  
+    // Change font color (only works for outside of flexboxes)
     fontColor.addEventListener("change", function() {
-      document.body.style.color = fontColor.value; // works
+      document.body.style.color = fontColor.value;
     });
-
-    let quote_b = document.getElementById("quoteButton")
-    
-    quote_b.addEventListener("click", function() {
-      
+  
+    // Changes the quote for this page load (doesn't save yet)
+    let quote_b = document.getElementById("quoteButton");
+    let quote_text = document.getElementById("quote");
+  
+    quote_b.addEventListener("click", function(event) {
+      event.preventDefault();          // Prevent form submission
+      let newQuote = document.getElementById("newQuote").value;
+      quote_text.innerText = newQuote; // Update quote text
     });
   </script>
 </body>
