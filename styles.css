@@ -171,6 +171,7 @@ thead {
   align-items: center;
 }
 
+<<<<<<< Updated upstream
   /* @media (min-width: 500px) {
     body {
       padding-right: 2vw;
@@ -197,6 +198,8 @@ thead {
         "footer footer  footer";
       }
   } */
+=======
+>>>>>>> Stashed changes
   body{
     /* align-items: flex-start; */
     margin: 0px;
@@ -238,6 +241,8 @@ thead {
     flex: 1;
     padding: 10px;
     box-sizing: border-box;
+    width:fit-content;
+
 }
 
 @media (max-width: 575px) {
