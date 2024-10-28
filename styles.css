@@ -59,7 +59,7 @@ a {
   width: 50%;
   margin-left: 5%;
   margin: 1%;
-    
+
 }
 
 .profile-picture {
@@ -102,7 +102,7 @@ a {
   color: white;
   padding: 10px;
   margin: 10px;
-  font-family: andale mono;
+  font-family: monospace;
 }
 
 .main-container {
@@ -182,19 +182,19 @@ thead {
         "ad      footer";
     }
   } */
-  
+
   /* @media (min-width: 700px) {
     .container {
       width: 100%;
       margin-right: 0%;
     }
     body {
-      flex-direction: row;      
+      flex-direction: row;
       grid-template-areas:
         "header header  header"
         "nav    content sidebar"
         "nav    content ad"
-        "footer footer  footer"; 
+        "footer footer  footer";
       }
   } */
   body{
@@ -222,8 +222,8 @@ thead {
   display: flex;
   flex-direction: row;
 }
- 
-  
+
+
   div {
     & .container {
       display: flex;
