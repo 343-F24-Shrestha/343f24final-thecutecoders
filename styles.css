@@ -171,35 +171,6 @@ thead {
   align-items: center;
 }
 
-<<<<<<< Updated upstream
-  /* @media (min-width: 500px) {
-    body {
-      padding-right: 2vw;
-      grid-template-columns: 1fr 3fr;
-      grid-template-areas:
-        "header  header"
-        "nav     nav"
-        "sidebar content"
-        "ad      footer";
-    }
-  } */
-
-  /* @media (min-width: 700px) {
-    .container {
-      width: 100%;
-      margin-right: 0%;
-    }
-    body {
-      flex-direction: row;
-      grid-template-areas:
-        "header header  header"
-        "nav    content sidebar"
-        "nav    content ad"
-        "footer footer  footer";
-      }
-  } */
-=======
->>>>>>> Stashed changes
   body{
     /* align-items: flex-start; */
     margin: 0px;
