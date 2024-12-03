@@ -14,7 +14,7 @@
         <a class="navbar-brand" href="index.html">To Do Buddy</a>
         <a class="groups" href="group.html">Groups</a>
         <a class="friends" href="friend.html">Friends</a>
-        <a class="calendar" href="calendar.html">See Full Calendar</a>
+        <a class="calendar" href="calendar.html">Calendar</a>
         <a class="profile" href="personal.html">Profile</a>
     </div>
     <div class="container">
@@ -49,22 +49,43 @@
                 </div>
             </main>
             <div class="col-sm-3 order-first flex-container">
-                <header aria-label="Left Section">My Day</header>
                 <div class="row">
                     <header aria-label="Tasks">All Personal Tasks</header>
                 <button class="AddButt" type="button">Add</button>
                 </div>
                 <div class="TasksContainer">
-                    <p>Task 1</p>
-                    <p>Task 2</p>
-                    <p>Task 3</p>
-                    <p>Task 4</p>
-                    <p>Task 5</p>
-                    <p>Task 6</p>
-                    <p>Task 7</p>
-                    <p>Task 8</p>
-                    <p>Task 9</p>
-                    <p>Task 10</p>
+                    <div class="task">
+                        <input type="checkbox" id="check" name="check">
+                        <label for="check" id="task-description"> Task 1</label>
+                    </div>
+                    <div class="task">
+                        <input type="checkbox" id="check" name="check">
+                        <label for="check" id="task-description"> Task 2</label>
+                    </div>
+                    <div class="task">
+                        <input type="checkbox" id="check" name="check">
+                        <label for="check" id="task-description"> Task 3</label>
+                    </div>
+                    <div class="task">
+                        <input type="checkbox" id="check" name="check">
+                        <label for="check" id="task-description"> Task 3</label>
+                    </div>
+                    <div class="task">
+                      <input type="checkbox" id="check" name="check">
+                      <label for="check" id="task-description"> Task 4</label>
+                    </div>
+                    <div class="task">
+                        <input type="checkbox" id="check" name="check">
+                        <label for="check" id="task-description"> Task 5</label>
+                    </div>
+                    <div class="task">
+                        <input type="checkbox" id="check" name="check">
+                        <label for="check" id="task-description"> Task 6</label>
+                    </div>
+                    <div class="task">
+                      <input type="checkbox" id="check" name="check">
+                      <label for="check" id="task-description"> Task 7</label>
+                    </div>
                 </div>
             </div>
             <div class="col-sm-3  order-last flex-container">
@@ -76,6 +97,7 @@
                     <button type="button" class="task-expandable" onclick="toggleVisible('Swim team')">Swim Team</button>
                     <p id="Swim_team">Go swimming</p>
                 </div>
+                <p>*click on group to view tasks</p>
             </div>
         </div>
     </div>

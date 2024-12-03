@@ -31,7 +31,7 @@
     <a class="navbar-brand" href="index.html">To Do Buddy</a>
     <a class="groups" href="group.html">Groups</a>
     <a class="friends" href="friend.html">Friends</a>
-    <a class="calendar" href="calendar.html">See Full Calendar</a>
+    <a class="calendar" href="calendar.html">Calendar</a>
     <a class="profile" href="personal.html">Profile</a>
   </div>
   <div class="container">
@@ -45,55 +45,103 @@
         <button class="remove" type="button" aria-label="remove task">Remove Task</button>
         <button class="completed" type="button" aria-label="see completed tasks">See Completed Tasks</button>
       </div> -->
-      <div class="col-sm-3 order-first flex-container">
+      <!-- <div class="col-sm-3 order-first flex-container">
         <header aria-label="Left Section">My Day</header>
         <div class="row">
           <header aria-label="Tasks">All Personal Tasks</header>
-      <button class="AddButt" type="button">Add</button>
-      </div>
+        <button class="AddButt" type="button">Add</button>
+        </div>
         <div class="TasksContainer">
-            <p>Task 1</p>
-            <p>Task 2</p>
-            <p>Task 3</p>
-            <p>Task 4</p>
-            <p>Task 5</p>
-            <p>Task 6</p>
-            <p>Task 7</p>
-            <p>Task 8</p>
-            <p>Task 9</p>
-            <p>Task 10</p>
-        </div>
-    </div>
-      <main class="col-6 flex-container"> <!--Main part of the page-->
-        <img src="Images/profilepic1.jpg" alt="Profile Picture" class="pfp">
-        <p>Connor Begley</p>
-        <p id="quote">"Oh, the things you can find, if you don’t stay behind." — Dr. Seuss</p>
-        <p>Listening to: "360, by Charli xcx"</p> <!--Make spotify eventually-->
-        <p>Mood: 🥸</p>
-      </main>
-      <!--Third part, aka settings, make dropdown-->
-      <aside class="col-2 order-last flex-container">
-        <div class="flex-container">
-          <header aria-label="Themes">Themes:</header>
-          <select id="mySelect" class="mySelect">
-            <option>⭐</option>
-            <option>❤️</option>
-            <option>🎃</option>
-          </select>
-          <button type="button">Custom Theme</button>
-          <label for="backcolor">Choose your background color:</label>
-          <input type="color" id="backcolor" value="#ff0000">
-          <p></p>
-          <label for="fontcolor">Choose your font color:</label>
-          <input type="color" id="fontcolor" value="#ff0000">
-          <form onsubmit="saveSettings(event)">
-            <label for="newQuote">New Quote</label>
-            <input type="text" name="quote" id="newQuote">
+          <div class="task">
+            <input type="checkbox" id="check" name="check">
+            <label for="check" id="task-description"> Task 1</label>
+          </div>
+          <div class="task">
+              <input type="checkbox" id="check" name="check">
+              <label for="check" id="task-description"> Task 2</label>
+          </div>
+          <div class="task">
+              <input type="checkbox" id="check" name="check">
+              <label for="check" id="task-description"> Task 3</label>
+          </div>
+          <div class="task">
+            <input type="checkbox" id="check" name="check">
+            <label for="check" id="task-description"> Task 4</label>
+          </div>
+          <div class="task">
+              <input type="checkbox" id="check" name="check">
+              <label for="check" id="task-description"> Task 5</label>
+          </div>
+          <div class="task">
+              <input type="checkbox" id="check" name="check">
+              <label for="check" id="task-description"> Task 6</label>
+          </div>
+          <div class="task">
+            <input type="checkbox" id="check" name="check">
+            <label for="check" id="task-description"> Task 7</label>
+          </div>
+          <div class="task">
+              <input type="checkbox" id="check" name="check">
+              <label for="check" id="task-description"> Task 8</label>
+          </div>
+          <div class="task">
+              <input type="checkbox" id="check" name="check">
+              <label for="check" id="task-description"> Task 9</label>
+          </div>
+          <div class="task">
+            <input type="checkbox" id="check" name="check">
+            <label for="check" id="task-description"> Task 10</label>
+          </div>
+          <div class="task">
+              <input type="checkbox" id="check" name="check">
+              <label for="check" id="task-description"> Task 11</label>
+          </div>
+          <div class="task">
+              <input type="checkbox" id="check" name="check">
+              <label for="check" id="task-description"> Task 12</label>
+          </div>
+        </div> -->
+        <main class="main-container"> <!--Main part of the page-->
+          <img src="Images/profilepic1.jpg" alt="Profile Picture" class="pfp">
+          <p>Connor Begley</p>
+          <p id="quote">"Oh, the things you can find, if you don’t stay behind." — Dr. Seuss</p>
+          <p>Listening to: "360, by Charli xcx"</p> <!--Make spotify eventually-->
+          <p>Mood: 🥸</p>
+        </main>
+        <!--Third part, aka settings, make dropdown-->
+        <!-- <aside class="col-2 order-last flex-container"> -->
+          <div class="col-2 order-last flex-container right-container">
+            <header aria-label="Themes">Personal Settings</header>
+              <label for="mySelect">Toggle Dark Mode</label>
+              <select id="mySelect" class="mySelect">
+                <option>⭐</option>
+                <option>❤️</option>
+                <option>🎃</option>
+              </select>
+            <!-- <button type="button">Custom Theme</button>
+            <label for="backcolor">Choose your background color:</label>
+            <input type="color" id="backcolor" value="#ff0000">
+            <p></p>
+            <label for="fontcolor">Choose your font color:</label>
+            <input type="color" id="fontcolor" value="#ff0000"> -->
+            <form onsubmit="saveSettings(event)">
+              <label for="newQuote">Quote</label>
+              <input type="text" name="quote" id="newQuote">
+            </form>
+            <form onsubmit="saveSettings(event)">
+              <label for="newSong">Song</label>
+              <input type="text" name="song" id="newSong">
+            </form>
+            <form onsubmit="saveSettings(event)">
+              <label for="newMood">Mood</label>
+              <input type="text" name="quote" id="newMood">
+            </form>
             <button type="submit">Save settings</button>
-          </form>
-          <p>Need Inspo? Click <a href="https://coolors.co/generate">here!</a></p>
-        </div>
-      </aside>
+            <!-- <p>Need Inspo? Click <a href="https://coolors.co/generate">here!</a></p> -->
+            </div>
+          </div>
+        <!-- </aside> -->
+    </div>
     </div>
   </div>
   <script>

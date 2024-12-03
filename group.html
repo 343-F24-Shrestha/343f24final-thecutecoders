@@ -16,7 +16,7 @@
     <a class="navbar-brand" href="index.html">To Do Buddy</a>
     <a class="groups" href="group.html">Groups</a>
     <a class="friends" href="friend.html">Friends</a>
-    <a class="calendar" href="calendar.html">See Full Calendar</a>
+    <a class="calendar" href="calendar.html">Calendar</a>
     <a class="profile" href="personal.html">Profile</a>
   </div>
   <div class="container">
@@ -28,31 +28,28 @@
         <header aria-label="Group tasks">Group Tasks</header>
         <div class="column">
           <button class="add" type="button" aria-label="add task">Add Task</button>
-          <button class="remove" type="button" aria-label="remove task">Remove Task</button>
-          <button class="completed" type="button" aria-label="see completed tasks">See Completed tasks</button>
         </div>
         <div class="TasksContainer">
-          <p>Pick Group!</p>
-      </div>
+          <button class="remove" type="button" aria-label="remove group">Delete Group</button>
+        </div>
+        <p>* pick a group to display its information</p>
+
       </main>
       <div class="col-sm-3 order-first flex-container">
         <header aria-label="All groups">All Groups</header>
-        <header aria-label="Right Section">Groups</header>
+        <button class="add" type="button" aria-label="new group">New Group</button>
                 <div class="TasksContainer">
                     <button type="button" class="task-expandable" onclick="toggleVisible('cs343')">CS343</button>
                     <!-- <p id="cs343">Complete Milestone 2</p> -->
-
                     <button type="button" class="task-expandable" onclick="toggleVisible('Swim team')">Swim Team</button>
                     <!-- <p id="Swim team">Go swimming</p> -->
                 </div>
       </div>
       <aside class="col-3 order-last flex-container">
-        <header aria-label="Edit section">Edit</header>
+        <header aria-label="Edit section">Members</header>
         <div class="TasksContainer">
-          <button class="add" type="button" aria-label="add group">Add Group</button>
-          <button class="remove" type="button" aria-label="remove group">Remove Group</button>
         </div>
-        </aside>
+      </aside>
     </div>
   </div>
   <script>

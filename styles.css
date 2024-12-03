@@ -152,7 +152,7 @@ button.AddButt {
   font-family: andale mono;
 }
 
-.days li {
+.day {
   list-style-type: none;
   display:inline-table;
   width: 12.6%;
