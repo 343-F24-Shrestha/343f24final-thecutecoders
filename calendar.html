@@ -9,6 +9,9 @@
 
   <style>
     /* YOUR STYLE HERE */
+    .main_container {
+      flex-direction: column;
+    }
   </style>
 </head>
 <body>
@@ -16,83 +19,270 @@
     <a class="navbar-brand" href="index.html">To Do Buddy</a>
     <a class="groups" href="group.html">Groups</a>
     <a class="friends" href="friend.html">Friends</a>
-    <a class="calendar" href="calendar.html">See Full Calendar</a>
+    <a class="calendar" href="calendar.html">Calendar</a>
     <a class="profile" href="personal.html">Profile</a>
   </div>
       <!--calendar-->
-    <div class="container">
-      <div class="row">
-        <div class="col-8">
-          <header aria-label="Full Calendar">
-            <h1>Full Calendar</h1>
-          </header>
-        </div>
-        <div class="col-12">
-            <header aria-label="Month" class="d-flex align-items-center justify-content-between">
-              <button class="btn btn-primary prev" type="button" aria-label="prev month" onclick="prevMonth()">&lt;&lt;</button>
-              <h2 id="monthYear" class="text-center">Current Month</h2>
-              <button class="btn btn-primary next" type="button" aria-label="next month" onclick="nextMonth()">&gt;&gt;</button>
+    <div class="main-container">
+        <div class="left">
+            <header aria-label="Full Calendar">
+              <h1>Calendar</h1>
             </header>
-            <div class="col-12 ml-auto">
-              <button class="filter" type="button" aria-label="filter button">Filter</button>
-              <div class="filter-content">
-                <input type="checkbox" value="groups">Groups
-                <input type="checkbox" value="friends">Friends
-                <input type="checkbox" value="personal">Personal
-                <input type="checkbox" value="completed">Completed
+            <!-- <div class="main"> -->
+              <header aria-label="Month" class="d-flex align-items-center justify-content-between">
+                <button class="btn btn-primary prev" type="button" aria-label="prev month" onclick="prevMonth()">&lt;&lt;</button>
+                <h2 id="monthYear" class="text-center">Current Month</h2>
+                <button class="btn btn-primary next" type="button" aria-label="next month" onclick="nextMonth()">&gt;&gt;</button>
+              </header>
+              <!-- <div class="col-12 ml-auto">
+                <button class="filter" type="button" aria-label="filter button">Filter</button>
+                <div class="filter-content">
+                  <input type="checkbox" value="groups">Groups
+                  <input type="checkbox" value="friends">Friends
+                  <input type="checkbox" value="personal">Personal
+                  <input type="checkbox" value="completed">Completed
+                </div>
+              </div> -->
+                <table class="table calendar-table mt-4">
+                  <thead>
+                    <tr>
+                      <th scope="row">Sun</th>
+                      <th scope="row">Mon</th>
+                      <th scope="row">Tue</th>
+                      <th scope="row">Wed</th>
+                      <th scope="row">Thu</th>
+                      <th scope="row">Fri</th>
+                      <th scope="row">Sat</th>
+                    </tr>
+                  </thead>
+                  <tbody id="calendarDays"></tbody>
+                </table>
+
+            <div class="days">
+              <div class="day">
+                <p class="date">1</p>
+                <div class="tasks">Tasks</div>
+                <div class="groups">Groups</div>
+                <div class="friends">Friends</div>
               </div>
+              <div class="day">
+                <p class="date">2</p>
+                <div class="tasks">Tasks</div>
+                <div class="groups">Groups</div>
+                <div class="friends">Friends</div>
+              </div>
+              <div class="day">
+                <p class="date">3</p>
+                <div class="tasks">Tasks</div>
+                <div class="groups">Groups</div>
+                <div class="friends">Friends</div>
+              </div>
+              <div class="day">
+                <p class="date">4</p>
+                <div class="tasks">Tasks</div>
+                <div class="groups">Groups</div>
+                <div class="friends">Friends</div>
+              </div>
+              <div class="day">
+                <p class="date">5</p>
+                <div class="tasks">Tasks</div>
+                <div class="groups">Groups</div>
+                <div class="friends">Friends</div>
+              </div>
+              <div class="day">
+                <p class="date">6</p>
+                <div class="tasks">Tasks</div>
+                <div class="groups">Groups</div>
+                <div class="friends">Friends</div>
+              </div>
+              <div class="day">
+                <p class="date">7</p>
+                <div class="tasks">Tasks</div>
+                <div class="groups">Groups</div>
+                <div class="friends">Friends</div>
+              </div>
+              <div class="day">
+                <p class="date">8</p>
+                <div class="tasks">Tasks</div>
+                <div class="groups">Groups</div>
+                <div class="friends">Friends</div>
+              </div>
+              <div class="day">
+                <p class="date">9</p>
+                <div class="tasks">Tasks</div>
+                <div class="groups">Groups</div>
+                <div class="friends">Friends</div>
+              </div>
+              <div class="day">
+                <p class="date">10</p>
+                <div class="tasks">Tasks</div>
+                <div class="groups">Groups</div>
+                <div class="friends">Friends</div>
+              </div>
+              <div class="day">
+                <p class="date">11</p>
+                <div class="tasks">Tasks</div>
+                <div class="groups">Groups</div>
+                <div class="friends">Friends</div>
+              </div>
+              <div class="day">
+                <p class="date">12</p>
+                <div class="tasks">Tasks</div>
+                <div class="groups">Groups</div>
+                <div class="friends">Friends</div>
+              </div>
+              <div class="day">
+                <p class="date">13</p>
+                <div class="tasks">Tasks</div>
+                <div class="groups">Groups</div>
+                <div class="friends">Friends</div>
+              </div>
+              <div class="day">
+                <p class="date">14</p>
+                <div class="tasks">Tasks</div>
+                <div class="groups">Groups</div>
+                <div class="friends">Friends</div>
+              </div>
+              <div class="day">
+                <p class="date">15</p>
+                <div class="tasks">Tasks</div>
+                <div class="groups">Groups</div>
+                <div class="friends">Friends</div>
+              </div>
+              <div class="day">
+                <p class="date">16</p>
+                <div class="tasks">Tasks</div>
+                <div class="groups">Groups</div>
+                <div class="friends">Friends</div>
+              </div>
+              <div class="day">
+                <p class="date">17</p>
+                <div class="tasks">Tasks</div>
+                <div class="groups">Groups</div>
+                <div class="friends">Friends</div>
+              </div>
+              <div class="day">
+                <p class="date">18</p>
+                <div class="tasks">Tasks</div>
+                <div class="groups">Groups</div>
+                <div class="friends">Friends</div>
+              </div>
+              <div class="day">
+                <p class="date">19</p>
+                <div class="tasks">Tasks</div>
+                <div class="groups">Groups</div>
+                <div class="friends">Friends</div>
+              </div>
+              <div class="day">
+                <p class="date">20</p>
+                <div class="tasks">Tasks</div>
+                <div class="groups">Groups</div>
+                <div class="friends">Friends</div>
+              </div>
+              <div class="day">
+                <p class="date">21</p>
+                <div class="tasks">Tasks</div>
+                <div class="groups">Groups</div>
+                <div class="friends">Friends</div>
+              </div>
+              <div class="day">
+                <p class="date">22</p>
+                <div class="tasks">Tasks</div>
+                <div class="groups">Groups</div>
+                <div class="friends">Friends</div>
+              </div>
+              <div class="day">
+                <p class="date">23</p>
+                <div class="tasks">Tasks</div>
+                <div class="groups">Groups</div>
+                <div class="friends">Friends</div>
+              </div>
+              <div class="day">
+                <p class="date">24</p>
+                <div class="tasks">Tasks</div>
+                <div class="groups">Groups</div>
+                <div class="friends">Friends</div>
+              </div>
+              <div class="day">
+                <p class="date">25</p>
+                <div class="tasks">Tasks</div>
+                <div class="groups">Groups</div>
+                <div class="friends">Friends</div>
+              </div>
+              <div class="day">
+                <p class="date">26</p>
+                <div class="tasks">Tasks</div>
+                <div class="groups">Groups</div>
+                <div class="friends">Friends</div>
+              </div>
+              <div class="day">
+                <p class="date">27</p>
+                <div class="tasks">Tasks</div>
+                <div class="groups">Groups</div>
+                <div class="friends">Friends</div>
+              </div>
+              <div class="day">
+                <p class="date">28</p>
+                <div class="tasks">Tasks</div>
+                <div class="groups">Groups</div>
+                <div class="friends">Friends</div>
+              </div>
+              <div class="day">
+                <p class="date">29</p>
+                <div class="tasks">Tasks</div>
+                <div class="groups">Groups</div>
+                <div class="friends">Friends</div>
+              </div>
+              <div class="day">
+                <p class="date">30</p>
+                <div class="tasks">Tasks</div>
+                <div class="groups">Groups</div>
+                <div class="friends">Friends</div>
+              </div>
+              <div class="day">
+                <p class="date">31</p>
+                <div class="tasks">Tasks</div>
+                <div class="groups">Groups</div>
+                <div class="friends">Friends</div>
+              </div>
+              
+              <!-- <li onclick="onClick(2)">2</li>
+              <li onclick="onClick(3)">3</li>
+              <li onclick="onClick(4)">4</li>
+              <li onclick="onClick(5)">5</li>
+              <li onclick="onClick(6)">6</li>
+              <li onclick="onClick(7)">7</li>
+              <li onclick="onClick(8)">8</li>
+              <li onclick="onClick(9)">9</li>
+              <li onclick="onClick(10)">10</li>
+              <li onclick="onClick(11)">11</li>
+              <li onclick="onClick(12)">12</li>
+              <li onclick="onClick(13)">13</li>
+              <li onclick="onClick(14)">14</li>
+              <li onclick="onClick(15)">15</li>
+              <li onclick="onClick(16)">16</li>
+              <li onclick="onClick(17)">17</li>
+              <li onclick="onClick(18)">18</li>
+              <li onclick="onClick(19)">19</li>
+              <li onclick="onClick(20)">20</li>
+              <li onclick="onClick(21)">21</li>
+              <li onclick="onClick(22)">22</li>
+              <li onclick="onClick(23)">23</li>
+              <li onclick="onClick(24)">24</li>
+              <li onclick="onClick(25)">25</li>
+              <li onclick="onClick(26)">26</li>
+              <li onclick="onClick(27)">27</li>
+              <li onclick="onClick(28)">28</li>
+              <li onclick="onClick(29)">29</li>
+              <li onclick="onClick(30)">30</li>
+              <li onclick="onClick(31)">31</li> -->
             </div>
-            <table class="table calendar-table mt-4">
-              <thead>
-                <tr>
-                  <th scope="row">Sun</th>
-                  <th scope="row">Mon</th>
-                  <th scope="row">Tue</th>
-                  <th scope="row">Wed</th>
-                  <th scope="row">Thu</th>
-                  <th scope="row">Fri</th>
-                  <th scope="row">Sat</th>
-                </tr>
-              </thead>
-              <tbody id="calendarDays"></tbody>
-            </table>
-    <ul class="days">
-      <li onclick="onClick(1)">1</li>
-      <li onclick="onClick(2)">2</li>
-      <li onclick="onClick(3)">3</li>
-      <li onclick="onClick(4)">4</li>
-      <li onclick="onClick(5)">5</li>
-      <li onclick="onClick(6)">6</li>
-      <li onclick="onClick(7)">7</li>
-      <li onclick="onClick(8)">8</li>
-      <li onclick="onClick(9)">9</li>
-      <li onclick="onClick(10)">10</li>
-      <li onclick="onClick(11)">11</li>
-      <li onclick="onClick(12)">12</li>
-      <li onclick="onClick(13)">13</li>
-      <li onclick="onClick(14)">14</li>
-      <li onclick="onClick(15)">15</li>
-      <li onclick="onClick(16)">16</li>
-      <li onclick="onClick(17)">17</li>
-      <li onclick="onClick(18)">18</li>
-      <li onclick="onClick(19)">19</li>
-      <li onclick="onClick(20)">20</li>
-      <li onclick="onClick(21)">21</li>
-      <li onclick="onClick(22)">22</li>
-      <li onclick="onClick(23)">23</li>
-      <li onclick="onClick(24)">24</li>
-      <li onclick="onClick(25)">25</li>
-      <li onclick="onClick(26)">26</li>
-      <li onclick="onClick(27)">27</li>
-      <li onclick="onClick(28)">28</li>
-      <li onclick="onClick(29)">29</li>
-      <li onclick="onClick(30)">30</li>
-      <li onclick="onClick(31)">31</li>
-    </ul>
-      <p id="Data">Data</p>
         </div>
+        <!-- <div class="right">
+          <p id="Data">Data</p>
+        </div> -->
       </div>
-</div>
+    </div>
 </body>
 </html>
   <script>
