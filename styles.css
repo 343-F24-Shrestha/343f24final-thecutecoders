@@ -232,3 +232,44 @@ thead {
     flex-direction: column; /* Stack the divs vertically */
   }
 }
+
+.fauxwindow {
+  width: 100%;
+  height: 100%;
+  position: fixed; /* Ensures the popup stays in place relative to the viewport */
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Adds a semi-transparent background */
+  display: none; /* Initially hidden */
+  justify-content: center; /* Centers content horizontally */
+  align-items: center; /* Centers content vertically */
+}
+
+.windowbody {
+  width: 300px; /* Set a fixed width for the popup content */
+  background-color: white; /* Make the popup content visible */
+  border-radius: 8px; /* Rounded corners for aesthetics */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25); /* Add a shadow for depth */
+  padding: 20px; /* Add some spacing inside the popup */
+  display: flex; /* Ensure flexbox layout applies */
+  flex-direction: column; /* Stack content vertically */
+}
+
+.close-button {
+  background-color: transparent; /* No background */
+  border: none; /* Remove border */
+  font-size: 16px; /* Adjust size */
+  cursor: pointer; /* Indicate it's clickable */
+  color: black; /* Default color */
+}
+
+.close-button:hover {
+  color: red; /* Optional hover feedback */
+}
+
+.flex_container {
+  display: flex; /* Use flexbox for layout */
+  justify-content: space-between; /* Space elements out horizontally */
+  align-items: center; /* Align items vertically */
+  gap: 10px; /* Add spacing between elements */
+}
