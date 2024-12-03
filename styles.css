@@ -1,10 +1,8 @@
-html {
+html, body {
   margin: 0%;
   justify-items: auto;
   padding-left: 0%;
   font-family: andale mono;
-}
-html, body {
   height: 100%;
   background-color: #b4a2cf;
   color: black;
@@ -31,6 +29,7 @@ a {
   padding: 5px;
   color: black;
 }
+
 .navbar {
   margin: 0px;
   padding: 1%;
@@ -72,23 +71,14 @@ a {
   height: 30px;
 }
 
-.friends-row {
-  background-color: #fcc8b2;
-}
 
-.friend-section {
+.friend-section, .friend-section > * {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.friend-section > * {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.group-column {
+.group-column, .friends-row {
   background-color: #fcc8b2;
 }
 
@@ -123,7 +113,6 @@ a {
   padding: 10px;
   font-family: andale mono;
   p {
-    /* background-color: #a269e3; */
     color: black;
   }
 }
@@ -145,6 +134,7 @@ button.AddButt {
   font-size: larger;
   font-family: andale mono;
 }
+
 .days {
   padding: 10px 0;
   background: #fcc8b2;
@@ -152,7 +142,7 @@ button.AddButt {
   font-family: andale mono;
 }
 
-.day {
+.days li {
   list-style-type: none;
   display:inline-table;
   width: 12.6%;
@@ -171,14 +161,10 @@ thead {
   align-items: center;
 }
 
-  body{
-    /* align-items: flex-start; */
+body{
     margin: 0px;
     font-family: andale mono;
     justify-content: center;
-    /* div {
-      width:100%;
-    } */
     & .container {
       margin-right: 0px;
       width: 100%;
@@ -186,7 +172,7 @@ thead {
       padding: 1%;
       align-items: center;
     }
-    .container{
+  .container{
       margin: 0%;
       width: 100%;
     }
@@ -198,23 +184,19 @@ thead {
 }
 
 
-  div {
+div {
     & .container {
       display: flex;
       align-items: center;
       padding: 4%;
     }
   }
-  .main-container {
-    flex: 2;
-    box-sizing: border-box;
-  }
- .flex-container {
+
+.flex-container {
     flex: 1;
     padding: 10px;
     box-sizing: border-box;
     width:fit-content;
-
 }
 
 /* 2.4 Here shows where the large to small viewport styles change */
@@ -222,54 +204,10 @@ thead {
   .main-container {
     order: -1;
   }
-  /* .flex-container{
 
-    flex-direction: row;
-  } */
  .row {
     padding: 5%;
     width: 100%;
     flex-direction: column; /* Stack the divs vertically */
   }
-}
-
-.fauxwindow {
-  width: 100%;
-  height: 100%;
-  position: fixed; /* Ensures the popup stays in place relative to the viewport */
-  top: 0;
-  left: 0;
-  background-color: rgba(0, 0, 0, 0.5); /* Adds a semi-transparent background */
-  display: none; /* Initially hidden */
-  justify-content: center; /* Centers content horizontally */
-  align-items: center; /* Centers content vertically */
-}
-
-.windowbody {
-  width: 300px; /* Set a fixed width for the popup content */
-  background-color: white; /* Make the popup content visible */
-  border-radius: 8px; /* Rounded corners for aesthetics */
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25); /* Add a shadow for depth */
-  padding: 20px; /* Add some spacing inside the popup */
-  display: flex; /* Ensure flexbox layout applies */
-  flex-direction: column; /* Stack content vertically */
-}
-
-.close-button {
-  background-color: transparent; /* No background */
-  border: none; /* Remove border */
-  font-size: 16px; /* Adjust size */
-  cursor: pointer; /* Indicate it's clickable */
-  color: black; /* Default color */
-}
-
-.close-button:hover {
-  color: red; /* Optional hover feedback */
-}
-
-.flex_container {
-  display: flex; /* Use flexbox for layout */
-  justify-content: space-between; /* Space elements out horizontally */
-  align-items: center; /* Align items vertically */
-  gap: 10px; /* Add spacing between elements */
 }
