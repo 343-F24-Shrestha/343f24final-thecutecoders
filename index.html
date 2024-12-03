@@ -63,8 +63,8 @@
                         <div class="windowbody">
                             <div class="flex_container">
                                 <button type="button" class="close-button" onclick="closeTaskWindow()">x</button>
-                                <form>
-                                    <input type="text">
+                                <form id="taskForm">
+                                    <input type="text" id="taskInput" placeholder="Enter task description">
                                     <button type="submit">Add Task</button>
                                 </form>
                             </div>
@@ -73,7 +73,7 @@
 
                 </div>
 
-                <div class="TasksContainer">
+                <div class="TasksContainer" id="myTasks">
                     <div class="task">
                         <input type="checkbox" id="check" name="check">
                         <label for="check" id="task-description"> Task 1</label>
