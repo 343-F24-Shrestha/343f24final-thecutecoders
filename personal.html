@@ -39,79 +39,16 @@
       <header aria-label="Personalization Page" class="title"><h1>Personal</h1></header>
     </div>
     <div class="row">
-      <!-- <div class="col-sm-2 order-first">
-        <header aria-label="My Tasks">My Tasks</header>
-        <button class="add" type="button" aria-label="add task">Add Task</button>
-        <button class="remove" type="button" aria-label="remove task">Remove Task</button>
-        <button class="completed" type="button" aria-label="see completed tasks">See Completed Tasks</button>
-      </div> -->
-      <!-- <div class="col-sm-3 order-first flex-container">
-        <header aria-label="Left Section">My Day</header>
-        <div class="row">
-          <header aria-label="Tasks">All Personal Tasks</header>
-        <button class="AddButt" type="button">Add</button>
-        </div>
-        <div class="TasksContainer">
-          <div class="task">
-            <input type="checkbox" id="check" name="check">
-            <label for="check" id="task-description"> Task 1</label>
-          </div>
-          <div class="task">
-              <input type="checkbox" id="check" name="check">
-              <label for="check" id="task-description"> Task 2</label>
-          </div>
-          <div class="task">
-              <input type="checkbox" id="check" name="check">
-              <label for="check" id="task-description"> Task 3</label>
-          </div>
-          <div class="task">
-            <input type="checkbox" id="check" name="check">
-            <label for="check" id="task-description"> Task 4</label>
-          </div>
-          <div class="task">
-              <input type="checkbox" id="check" name="check">
-              <label for="check" id="task-description"> Task 5</label>
-          </div>
-          <div class="task">
-              <input type="checkbox" id="check" name="check">
-              <label for="check" id="task-description"> Task 6</label>
-          </div>
-          <div class="task">
-            <input type="checkbox" id="check" name="check">
-            <label for="check" id="task-description"> Task 7</label>
-          </div>
-          <div class="task">
-              <input type="checkbox" id="check" name="check">
-              <label for="check" id="task-description"> Task 8</label>
-          </div>
-          <div class="task">
-              <input type="checkbox" id="check" name="check">
-              <label for="check" id="task-description"> Task 9</label>
-          </div>
-          <div class="task">
-            <input type="checkbox" id="check" name="check">
-            <label for="check" id="task-description"> Task 10</label>
-          </div>
-          <div class="task">
-              <input type="checkbox" id="check" name="check">
-              <label for="check" id="task-description"> Task 11</label>
-          </div>
-          <div class="task">
-              <input type="checkbox" id="check" name="check">
-              <label for="check" id="task-description"> Task 12</label>
-          </div>
-        </div> -->
-        <main class="main-container"> <!--Main part of the page-->
+        <main class="main-container">
           <img src="Images/profilepic1.jpg" alt="Profile Picture" class="pfp">
           <p>Connor Begley</p>
           <p id="quote">"Oh, the things you can find, if you don’t stay behind." — Dr. Seuss</p>
-          <p>Listening to: "360, by Charli xcx"</p> <!--Make spotify eventually-->
+          <p>Listening to: "360, by Charli xcx"</p>
           <p>Mood: 🥸</p>
           <button type="reset">Reset Account</button>
           <p>*send warning it will clear all data</p>
         </main>
-        <!--Third part, aka settings, make dropdown-->
-        <!-- <aside class="col-2 order-last flex-container"> -->
+
           <div class="col-2 order-last flex-container right-container">
             <header aria-label="Themes">Personal Settings</header>
               <label for="mySelect">Toggle Dark Mode</label>
@@ -120,12 +57,6 @@
                 <option>❤️</option>
                 <option>🎃</option>
               </select>
-            <!-- <button type="button">Custom Theme</button>
-            <label for="backcolor">Choose your background color:</label>
-            <input type="color" id="backcolor" value="#ff0000">
-            <p></p>
-            <label for="fontcolor">Choose your font color:</label>
-            <input type="color" id="fontcolor" value="#ff0000"> -->
             <form onsubmit="saveSettings(event)">
               <label for="newQuote">Quote</label>
               <input type="text" name="quote" id="newQuote">
@@ -142,10 +73,8 @@
               <button type="submit">Save</button>
             </form>
             <button type="submit">Save settings</button>
-            <!-- <p>Need Inspo? Click <a href="https://coolors.co/generate">here!</a></p> -->
             </div>
           </div>
-        <!-- </aside> -->
   </div>
   <script>
     let backgroundColor = document.getElementById("backcolor");

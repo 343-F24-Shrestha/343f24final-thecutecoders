@@ -40,7 +40,7 @@
                                 src="Images/error.jpg" width="20" height="20">
                         </div>
                         <button type="button" class="task-expandable" onclick="toggleVisible('barb')">Tasks</button>
-                        <p id="barb">Exercise or whatever</p>
+                        <p id="barb">- Pickup Target Order</p>
                     </div>
 
                     <div class="row friend-section">
@@ -51,8 +51,8 @@
                             <img alt="Jerry's status" class="status-emoji col-sm-3" id="profile2emoji"
                                 src="Images/error.jpg" width="20" height="20">
                         </div>
-                        <button type="button" class="task-expandable" onclick="toggleVisible('jerry')">Tasks</button>
-                        <p id="jerry">Do homework</p>
+                        <button type="button" class="task-expandable" onclick="toggleVisible('jerry'), toggleVisible('jerry2')">Tasks</button>
+                        <p id="jerry">- Finish CS Homework</p>
                     </div>
                 </div>
             </main>
@@ -77,31 +77,31 @@
                 <div class="TasksContainer" id="myTasks">
                     <div class="task">
                         <input type="checkbox" id="c1" name="c1">
-                        <label for="check" id="descr1"> Task 1</label>
+                        <label for="c1" id="descr1"> Task 1</label>
                     </div>
                     <div class="task">
                         <input type="checkbox" id="c2" name="c2">
-                        <label for="check" id="descr2"> Task 2</label>
+                        <label for="c2" id="descr2"> Task 2</label>
                     </div>
                     <div class="task">
                         <input type="checkbox" id="c3" name="c3">
-                        <label for="check" id="descr3"> Task 3</label>
+                        <label for="c3" id="descr3"> Task 3</label>
                     </div>
                     <div class="task">
                       <input type="checkbox" id="c4" name="c4">
-                      <label for="check" id="descr4"> Task 4</label>
+                      <label for="c4" id="descr4"> Task 4</label>
                     </div>
                     <div class="task">
                         <input type="checkbox" id="c5" name="c5">
-                        <label for="check" id="descr5"> Task 5</label>
+                        <label for="c5" id="descr5"> Task 5</label>
                     </div>
                     <div class="task">
                         <input type="checkbox" id="c6" name="c6">
-                        <label for="check" id="descr6"> Task 6</label>
+                        <label for="c6" id="descr6"> Task 6</label>
                     </div>
                     <div class="task">
                       <input type="checkbox" id="c7" name="c7">
-                      <label for="check" id="descr7"> Task 7</label>
+                      <label for="c7" id="descr7"> Task 7</label>
                     </div>
                 </div>
             </div>
@@ -109,11 +109,11 @@
                 <header aria-label="Right Section">Groups</header>
                 <div class="TasksContainer">
                     <button type="button" class="task-expandable" onclick="toggleVisible('cs343')">CS343</button>
-                    <p id="cs343">Complete Milestone 2</p>
+                    <p id="cs343">- Complete Milestone 2</p>
 
                     <button type="button" class="task-expandable" onclick="toggleVisible('Swim team')">Swim
                         Team</button>
-                    <p id="Swim_team">Go swimming</p>
+                    <p id="Swim_team">- Meet against WVU</p>
                 </div>
                 <p>*click on group to view tasks</p>
             </div>
@@ -129,7 +129,6 @@
                 x.style.display = 'block';
             }
         }
-
         toggleVisible("barb");
         toggleVisible("jerry");
         toggleVisible("barb");
@@ -152,8 +151,8 @@
             console.log("Goodbye! Finished changing status")
         }
         // Sets two examples
-        changeStatus(["profile1pic", "Images/profilepic1.jpg"], ["profile1text", "Barbara - 'Doing fine!'"], ["profile1emoji", "Images/happyEmoji.png"]);
-        changeStatus(["profile2pic", "Images/profilepic2.jpg"], ["profile2text", "Jerry - 'I'm so sad.'"], ["profile2emoji", "Images/sadEmoji.png"]);
+        changeStatus(["profile1pic", "Images/profilepic1.jpg"], ["profile1text", "Barbara - 'Feeling Busy'"], ["profile1emoji", "Images/happyEmoji.png"]);
+        changeStatus(["profile2pic", "Images/profilepic2.jpg"], ["profile2text", "Jerry - 'Ready for the Weekend'"], ["profile2emoji", "Images/sadEmoji.png"]);
 
     </script>
 
