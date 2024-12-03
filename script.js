@@ -1,3 +1,8 @@
+window.onload = function() {
+  console.log("Loaded!");
+  closeTaskWindow();
+}
+
 /**
  * Function that opens and closes the add task window.
  */

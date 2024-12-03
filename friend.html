@@ -51,7 +51,18 @@
       </main>
       <div class="col-sm-3 order-first flex-container">
         <header aria-label="friends">Friends</header>
-        <button class="add" type="button" aria-label="add friend">Add Friend</button>
+        <button class="add" onclick="addTaskWindow()" type="button">Add Friend</button>
+                    <div class="fauxwindow" id="add_task_window">
+                        <div class="windowbody">
+                            <div class="flex_container">
+                                <button type="button" class="close-button" onclick="closeTaskWindow()">x</button>
+                                <form id="taskForm">
+                                    <input type="text" id="taskInput" placeholder="Username">
+                                    <button type="submit">Add Friend</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
         <div class="TasksContainer">
           <p>Nevina</p>
           <p>Eliza</p>
