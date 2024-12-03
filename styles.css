@@ -176,7 +176,6 @@ body{
   flex-direction: row;
 }
 
-
 div {
     & .container {
       display: flex;
