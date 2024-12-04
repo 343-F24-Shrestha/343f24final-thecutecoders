@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="styles.css" rel="stylesheet">
+    <link rel="icon" href="https://fav.farm/🪷">
+    <style>
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <a class="navbar-brand" href="index.html">To Do Buddy</a>
+        <a class="groups" href="group.html">Groups</a>
+        <a class="friends" href="friend.html">Friends</a>
+        <a class="calendar" href="calendar.html">Calendar</a>
+        <a class="profile" href="personal.html">Profile</a>
+    </div>
+    <div class="container">
+        <div class="row">
+            <header aria-label="head">
+                <h1>Home</h1>
+            </header>
+        </div>
+        <div class="row">
+            <main class="col-sm-5 main-container">
+                <header aria-label="Today's Events Section">Friends</header>
+                <div class="status-updates row">
+                    <div class="row friend-section">
+                        <div class="row">
+                            <img alt="Barbara's Photo" class="profile-picture col-sm-3" id="profile1pic"
+                                src="Images/error.jpg">
+                            <p id="profile1text" class="col-sm-8">Error</p>
+                            <img alt="Barbara's Status" class="status-emoji col-sm-3" id="profile1emoji"
+                                src="Images/error.jpg" width="20" height="20">
+                        </div>
+                        <button type="button" class="task-expandable" onclick="toggleVisible('barb')">Tasks</button>
+                        <p id="barb">- Pickup Target Order</p>
+                    </div>
+
+                    <div class="row friend-section">
+                        <div class="row">
+                            <img alt="Jerry's photo" class="profile-picture col-sm-3" id="profile2pic"
+                                src="Images/error.jpg">
+                            <p id="profile2text" class="col-sm-8">Error</p>
+                            <img alt="Jerry's status" class="status-emoji col-sm-3" id="profile2emoji"
+                                src="Images/error.jpg" width="20" height="20">
+                        </div>
+                        <button type="button" class="task-expandable"
+                            onclick="toggleVisible('jerry'), toggleVisible('jerry2')">Tasks</button>
+                        <p id="jerry">- Finish CS Homework</p>
+                    </div>
+                </div>
+            </main>
+            <div class="col-sm-3 order-first flex-container">
+                <div class="row">
+                    <header aria-label="Tasks">My Tasks</header>
+                    <button class="AddButt" onclick="addTaskWindow()" type="button">Add task</button>
+                    <div class="fauxwindow" id="add_task_window" style="display: none;">
+                        <div class="windowbody">
+                            <div class="flex_container">
+                                <button type="button" class="close-button" onclick="closeTaskWindow()">x</button>
+                                <form id="taskForm">
+                                    <input type="text" id="taskInput" placeholder="Enter task description">
+                                    <button type="submit">Add Task</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="TasksContainer" id="myTasks">
+                    <div class="task">
+                        <input type="checkbox" id="c1" name="c1">
+                        <label for="c1" id="descr1"> Task 1</label>
+                    </div>
+                    <div class="task">
+                        <input type="checkbox" id="c2" name="c2">
+                        <label for="c2" id="descr2"> Task 2</label>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3  order-last flex-container">
+                <header aria-label="Right Section">Groups</header>
+                <div class="TasksContainer">
+                    <button type="button" class="task-expandable" onclick="toggleVisible('cs343')">CS343</button>
+                    <p id="cs343">- Complete Milestone 2</p>
+
+                    <button type="button" class="task-expandable" onclick="toggleVisible('Swim team')">Swim
+                        Team</button>
+                    <p id="Swim_team">- Meet against WVU</p>
+                </div>
+                <p>*click on group to view tasks</p>
+            </div>
+        </div>
+    </div>
+    <script>
+        function toggleVisible(id, bool) {
+            x = document.getElementById(id);
+            if (x.style.display == 'block') {
+                x.style.display = 'none';
+            }
+            else {
+                x.style.display = 'block';
+            }
+        }
+        toggleVisible("barb");
+        toggleVisible("jerry");
+        toggleVisible("barb");
+        toggleVisible("jerry");
+        toggleVisible("cs343");
+        toggleVisible("cs343");
+        toggleVisible("Swim_team");
+        toggleVisible("Swim_team");
+
+
+
+        // Accepts three tuples with for the status' picture, text, and emoji.
+        // Uses the tuple's first object as a target, and the second as the content.
+        // Used in the main section
+        function changeStatus(pic, status, emoji) {
+            console.log("Hello! Trying to change status")
+            document.getElementById(pic[0]).src = pic[1];
+            document.getElementById(status[0]).textContent = status[1];
+            document.getElementById(emoji[0]).src = emoji[1];
+            console.log("Goodbye! Finished changing status")
+        }
+        // Sets two examples
+        changeStatus(["profile1pic", "Images/profilepic1.jpg"], ["profile1text", "Barbara - 'Feeling Busy'"], ["profile1emoji", "Images/happyEmoji.png"]);
+        changeStatus(["profile2pic", "Images/profilepic2.jpg"], ["profile2text", "Jerry - 'Ready for the Weekend'"], ["profile2emoji", "Images/sadEmoji.png"]);
+
+    </script>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
