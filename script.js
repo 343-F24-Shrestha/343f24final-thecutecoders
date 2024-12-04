@@ -33,7 +33,7 @@ function setupTaskWindow() {
   }
   var tasks = localStorage.getItem("tasks").split(",");
 
-  for (let i = 0; i < tasks.length; i++) {
+  for (let i = 1; i < tasks.length; i++) {
     addTaskToWindow(tasks[i]);
   }
 }
