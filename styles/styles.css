@@ -184,6 +184,10 @@ div {
     }
   }
 
+  div .color {
+    padding: 10px;
+  }
+
 /* 2.4 Here shows where the large to small viewport styles change */
 @media (max-width: 575px) {
   .main-container {
