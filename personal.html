@@ -43,8 +43,8 @@
           <img src="Images/profilepic1.jpg" alt="Profile Picture" class="pfp">
           <p>Connor Begley</p>
           <p id="quote">"Oh, the things you can find, if you don’t stay behind." — Dr. Seuss</p>
-          <p>Listening to: "360, by Charli xcx"</p>
-          <p>Mood: 🥸</p>
+          <p id="song">Listening to: "360, by Charli xcx"</p>
+          <p id="mood">Mood: 🥸</p>
           <button type="reset">Reset Account</button>
           <p>*send warning it will clear all data</p>
         </main>
@@ -52,35 +52,33 @@
           <div class="col-2 order-last flex-container right-container">
             <header aria-label="Themes">Personal Settings</header>
             <form onsubmit="saveSettings(event)">
-              <label for="newQuote">Quote</label>
               <input type="text" name="quote" id="newQuote">
-              <button type="submit">Save</button>
-            </form>
-            <form onsubmit="saveSettings(event)">
-              <label for="newSong">Song</label>
+              <label for="newQuote">Quote</label>
               <input type="text" name="song" id="newSong">
-              <button type="submit">Save</button>
-            </form>
-            <form onsubmit="saveSettings(event)">
+              <label for="newSong">Song</label>
+              <input type="text" name="mood" id="newMood">
               <label for="newMood">Mood</label>
-              <input type="text" name="quote" id="newMood">
+              <p></p>
               <button type="submit">Save</button>
             </form>
-            <button type="submit">Save settings</button>
             </div>
           </div>
   </div>
   <script>
-    let backgroundColor = document.getElementById("backcolor");
-    let fontColor = document.getElementById("fontcolor");
     let quote_text = document.getElementById("quote");
+    let song_text = document.getElementById("song");
+    let mood_text = document.getElementById("mood");
 
     function saveSettings(event) {
+      console.log("called")
       event.preventDefault() // doesn't reload page
-      document.body.style.color = fontColor.value;
-      document.body.style.backgroundColor = backgroundColor.value;
       let newQuote = document.getElementById("newQuote").value;
+      let newSong = document.getElementById("newSong").value;
+      let newMood = document.getElementById("newMood").value;
       quote_text.innerText = newQuote; // Update quote text
+      song_text.innerText = newSong; // Update song text
+      mood_text.innerText = newMood; // Update mood text
+      console.log("changed")
     }
   </script>
 </body>
